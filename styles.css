@@ -113,6 +113,77 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.middle-content i {
+    font-size: 4rem;
+    color: #1aa1f5;
+    margin-bottom: 2rem;
+}
+
+.middle-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
+    line-height: 4rem;
+}
+
+.middle-content h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.middle-content button {
+    margin: 0.8rem 0;
+    padding: 0.5rem;
+    border: .1rem solid #1aa1f5;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.sign-up {
+    background-color: #1aa1f5;
+    color: #ffffff;
+}
+
+.sign-up:hover {
+    background-color: #0f5d8d;
+}
+
+.log-in {
+    background-color: #ffffff;
+}
+
+.log-in:hover {
+    background-color: #d9ebf7;
 }
 /* end of right */
+
+/* footer */
+.main-page-footer {
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+    background-color: #f5f4f4;
+    padding: 1.5rem;
+    border: .1rem solid #dddddd;
+}
+
+.main-page-footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.main-page-footer a {
+    font-size: 1.6rem;
+    padding: 0 2rem;
+    text-decoration: none;
+    color: #444;
+    font-weight: 300;
+}
+/* end of footer */
 /* end of main page */
