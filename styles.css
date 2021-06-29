@@ -207,4 +207,12 @@ body {
 }
 /* end of login page nav */
 
+/* login */
+.login {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: #ffffff;
+  width: 100rem;
+}
+/* end of login */
 /* end of login page */
