@@ -239,11 +239,11 @@ body {
   width: 30rem;
   height: 3.5rem;
   margin-bottom: 1rem;
-  border: .1rem solid #dddddd;
-  border-radius: .5rem;
+  border: 0.1rem solid #dddddd;
+  border-radius: 0.5rem;
   padding-left: 1rem;
   font-size: 1.5rem;
-  transition: background-color .3s;
+  transition: background-color 0.3s;
 }
 
 .login-form input:focus {
@@ -259,7 +259,7 @@ body {
   background-color: #1aa1f5;
   color: #ffffff;
   border-radius: 4rem;
-  border: .1rem solid #1aa1f5;
+  border: 0.1rem solid #1aa1f5;
   font-size: 1.5rem;
   font-weight: bold;
   margin-right: 1rem;
@@ -292,7 +292,7 @@ body {
 .login-footer p {
   font-size: 1.6rem;
   font-weight: 300;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 .login-footer a {
@@ -301,3 +301,97 @@ body {
 }
 /* end of login */
 /* end of login page */
+
+/* news feed page */
+.news-feed-page {
+  width: 100%;
+  height: 100vh;
+}
+
+/* news feed nav */
+.news-feed-nav {
+  position: fixed;
+  width: 100%;
+  height: 6.5rem;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons a {
+  text-decoration: none;
+  margin-right: 7rem;
+  font-size: 2.5rem;
+  color: #9e9a9a;
+}
+
+.icons .active {
+  color: #1aa1f5;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-bar-input {
+  width: 35rem;
+  height: 3rem;
+  border: .1rem solid #d6e1e9;
+  border-radius: 3rem;
+  background-color: #d6e1e9;
+  padding-left: 5rem;
+  transition: all .3s;
+}
+
+.search-bar-input:focus {
+  background-color: #ffffff;
+  border-color: #1aa1f5;
+}
+
+.search-bar i {
+  position: absolute;
+  font-size: 1.6rem;
+  left: 1.5rem;
+  color: #9e9a9a;
+}
+
+.user {
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-img-wrapper {
+  width: 4rem;
+  height: 4rem;
+}
+
+.user-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* avoid stretching of image */
+  border-radius: 50%;
+}
+
+.user-link {
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #444444;
+}
+
+.user i {
+  color: #444444;
+  font-size: 1.6rem;
+}
+/* end of news feed nav */
+/* end of news feed page */
