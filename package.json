@@ -1,0 +1,23 @@
+{
+  "name": "twertter-clone",
+  "version": "1.0.0",
+  "description": "A learning project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rkh-leung/twertter-clone.git"
+  },
+  "author": "Raymond Leung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rkh-leung/twertter-clone/issues"
+  },
+  "homepage": "https://github.com/rkh-leung/twertter-clone#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

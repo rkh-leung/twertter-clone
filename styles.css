@@ -21,7 +21,7 @@ body {
 .main-page {
   width: 100%;
   height: 100vh;
-  display: none;
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr min-content;
 }
@@ -344,11 +344,11 @@ body {
 .search-bar-input {
   width: 35rem;
   height: 3rem;
-  border: .1rem solid #d6e1e9;
+  border: 0.1rem solid #d6e1e9;
   border-radius: 3rem;
   background-color: #d6e1e9;
   padding-left: 5rem;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .search-bar-input:focus {
@@ -396,7 +396,7 @@ body {
 /* end of news feed nav */
 /* news feed content */
 .news-feed-content {
-  display: grid;
+  display: none;
   grid-template-columns: minmax(5rem, 1fr) 60rem 40rem minmax(5rem, 1fr);
   grid-template-rows: repeat(2, min-content);
   padding-top: 6.5rem;
@@ -413,7 +413,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: .1rem solid #eee;
+  border-bottom: 0.1rem solid #eee;
   padding: 1.5rem;
 }
 
@@ -430,7 +430,7 @@ body {
   display: flex;
   align-items: center;
   padding: 1rem;
-  border-bottom: .1rem solid #eee;
+  border-bottom: 0.1rem solid #eee;
 }
 
 .header-img-wrapper {
@@ -449,10 +449,10 @@ body {
 .header-post input {
   width: 35rem;
   height: 3rem;
-  border: .1rem solid #d6e1e9;
+  border: 0.1rem solid #d6e1e9;
   border-radius: 3rem;
   background-color: #d6e1e9;
-  padding: .4rem 1.5rem;
+  padding: 0.4rem 1.5rem;
 }
 
 .header-post i {
@@ -470,7 +470,7 @@ body {
 .post {
   display: flex;
   padding: 1.5rem;
-  border-bottom: .1rem solid #eeeeee;
+  border-bottom: 0.1rem solid #eeeeee;
 }
 
 .user-avatar {
@@ -495,13 +495,13 @@ body {
 
 .post-user-info h4 {
   font-size: 1.6rem;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .post-user-info i {
   font-size: 1.6rem;
   color: #1aa1f5;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .post-user-info span {
@@ -546,14 +546,14 @@ body {
 .follow-heading {
   padding: 1rem;
   font-size: 1.8rem;
-  border-bottom: .1rem solid #eeeeee;
+  border-bottom: 0.1rem solid #eeeeee;
 }
 
 .follow-user {
   display: flex;
   align-items: center;
   padding: 1.5rem;
-  border-bottom: .1rem solid #eeeeee;
+  border-bottom: 0.1rem solid #eeeeee;
 }
 
 .follow-user-img {
@@ -569,9 +569,10 @@ body {
   border-radius: 50%;
 }
 
-.follow-user-info h4, .follow-user-info p {
+.follow-user-info h4,
+.follow-user-info p {
   font-size: 1.6rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .follow-btn {
@@ -579,8 +580,8 @@ body {
   width: 9rem;
   background-color: #ffffff;
   color: #1aa1f5;
-  padding: .7rem .5rem;
-  border: .1rem solid #1aa1f5;
+  padding: 0.7rem 0.5rem;
+  border: 0.1rem solid #1aa1f5;
   border-radius: 2rem;
   font-size: 1.6rem;
   cursor: pointer;
@@ -607,10 +608,30 @@ body {
 }
 
 .follow-footer a {
- text-decoration: none;
+  text-decoration: none;
   font-size: 1.5rem;
   color: #868383;
-  margin: 0 .7rem;
+  margin: 0 0.7rem;
 }
 /* end of news feed content */
+
+.post-btn {
+  position: fixed;
+  bottom: 2rem;
+  left: 68%;
+  width: 12rem;
+  padding: 1.5rem 1rem;
+  background-color: #1aa1f5;
+  color: #ffffff;
+  font-size: 2rem;
+  border: 0.1rem solid #1aa1f5;
+  border-radius: 3rem;
+  cursor: pointer;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+.post-btn:hover {
+  background-color: #117abb;
+}
 /* end of news feed page */
