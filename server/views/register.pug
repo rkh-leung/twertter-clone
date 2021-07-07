@@ -3,7 +3,7 @@ extends layouts/login-layout.pug
 block content    
     .loginContainer
         h1 Register
-            form#registerForm(method='post', onsubmit="event.preventDefault() validateForm()")
+            form#registerForm(method='post', onsubmit="event.preventDefault(); validateForm()")
 
                 p.errorMessage #{errorMessage}
 
@@ -22,8 +22,8 @@ block content
         let passwordConfirmField = document.getElementById('passwordConfirm')
         let form = document.getElementById('registerForm')
 
-        const validationForm = () => {
-            if(passwordField.nodeValue !== passwordConfirmField.nodeValue) {
+        const validateForm = () => {
+            if(passwordField.value !== passwordConfirmField.value) {
                 alert('Your password does not match. Please try again.')
             } else {
                 form.submit()
