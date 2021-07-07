@@ -1,9 +1,4 @@
-const express = require('express');
-const app = express();
-const router = express.Router();
-
-app.set("view engine", "pug");
-app.set("views", "views");
+const router = require('express').Router();
 
 router.get("/", (req, res, next) => {
     
