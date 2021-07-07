@@ -1,10 +1,6 @@
 const router = require('express').Router();
-const bodyParser = require('body-parser')
-
-
 
 router.get("/", (req, res, next) => {
-    
     res.status(200).render("register");
 })
 
@@ -17,8 +13,9 @@ router.post('/', (req, res, next) => {
     let payload = req.body
 
     if (firstName && lastName && username && email && password) {
-
-    } else {
+        console.log(payload)
+    }
+     else {
         payload.errorMessage = 'Please make sure each field has a valid value.'
         res.status(200).render('register', payload)
     }
