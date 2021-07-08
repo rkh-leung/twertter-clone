@@ -2,12 +2,12 @@ const express = require('express')
 const server = express()
 const path = require('path')
 const bodyParser = require('body-parser')
-const result = dotenv.config()
-
+const result = require('dotenv').config()
 if (result.error) {
     throw result.error
 }
-console.log(result.parsed)
+
+// console.log(result.parsed)
 
 server.set('view engine', 'pug')
 server.set('views', path.join(__dirname, 'views'))
