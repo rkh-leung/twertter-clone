@@ -6,7 +6,6 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title #{pageTitle}
 
-        link(rel='stylesheet', href='styles.css', type='text/css')
         link(rel="stylesheet", href="main.css", type='text/css')
 body
     .wrapper
@@ -26,7 +25,7 @@ body
                     i.fas.fa-user
                 a(href="/logout")
                     i.fas.fa-sign-out-alt
-                .titleContainer
+            .titleContainer
                     h1 #{pageTitle}
             .mainSectionContainer
                 block content
