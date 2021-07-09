@@ -7,5 +7,30 @@ html(lang="en")
         title #{pageTitle}
 
         link(rel='stylesheet', href='styles.css', type='text/css')
-    body
-        block content 
+        link(rel="stylesheet", href="main.css", type='text/css')
+body
+    .wrapper
+        .row
+            nav
+                a.blue(href="/")
+                    i.fas.fa-dove
+                a(href="/")
+                    i.fas.fa-home
+                a(href="/search")
+                    i.fas.fa-search
+                a(href="/notifications")
+                    i.fas.fa-bell
+                a(href="/messages")
+                    i.fas.fa-envelope
+                a(href="/profile")
+                    i.fas.fa-user
+                a(href="/logout")
+                    i.fas.fa-sign-out-alt
+                .titleContainer
+                    h1 #{pageTitle}
+
+                block content
+
+                span third column
+
+    script(src="https://kit.fontawesome.com/bc63f64439.js" crossorigin="anonymous")
