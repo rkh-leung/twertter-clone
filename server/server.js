@@ -16,6 +16,7 @@ server.use(express.static(path.join(__dirname, 'public')))
 
 server.use('/', require('./routes/homeRoutes'))
 server.use('/login', require('./routes/loginRoutes'))
+server.use('/logout', require('./routes/logoutRoutes'))
 server.use('/register', require('./routes/registerRoutes'))
 
 
