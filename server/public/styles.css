@@ -43,3 +43,9 @@ input[type="submit"] {
     border-radius: 2px;
     margin-bottom: 10px;
 }
+
+a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #0099ff;
+}
