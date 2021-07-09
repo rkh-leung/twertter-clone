@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const bcrypt = require('bcrypt')
 const User = require('../schemas/userSchemas')
 require('../mongoUtil')
 
@@ -29,6 +30,7 @@ router.post('/', async (req, res, next) => {
         if (user == null) {
             // no user found
             const data = req.body
+            data.password = await bcrypt.hash(password, 10,)
 
             User.create(data)
                 .then((user) => {
