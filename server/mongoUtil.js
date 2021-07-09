@@ -6,7 +6,12 @@ class DatabaseConnect {
     }
     connect() {
         const uri = process.env.DB_URI
-        mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+        mongoose.connect(uri, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useFindAndModify: false,
+            useCreateIndex: true
+        })
             .then(() => {
                 console.log('Connected to MongoDB')
             })
