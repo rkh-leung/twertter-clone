@@ -2,10 +2,8 @@ const express = require('express')
 const server = express()
 const path = require('path')
 const bodyParser = require('body-parser')
-const result = require('dotenv').config()
 const session = require('express-session')
-
-if (result.error) throw result.error
+require('dotenv').config()
 
 server.set('view engine', 'pug')
 server.set('views', path.join(__dirname, 'views'))
