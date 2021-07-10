@@ -14,7 +14,8 @@ server.use(session({ secret: 'neovim lover', resave: false, saveUninitialized: t
 server.use(bodyParser.urlencoded({ extended: false }))
 server.use(express.static(path.join(__dirname, 'public')))
 
-server.use('/', require('./routes/homeRoutes'))
+server.use('/', require('./routes/landingRoutes'))
+server.use('/home', require('./routes/homeRoutes'))
 server.use('/login', require('./routes/loginRoutes'))
 server.use('/logout', require('./routes/logoutRoutes'))
 server.use('/register', require('./routes/registerRoutes'))

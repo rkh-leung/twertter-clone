@@ -1,0 +1,70 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,600&display=swap' rel='stylesheet')
+    script(src='https://kit.fontawesome.com/bc63f64439.js' crossorigin='anonymous')
+    link(rel='stylesheet' href='/css/landing.css')
+    title Twertter Clone
+// main page
+section.main-page
+    // left
+    .left
+        .left-content
+            div
+                i.fas.fa-search
+                h3.left-content-heading Find your interests
+            div
+                i.fas.fa-user-friends
+                h3.left-content-heading
+                    | Explore what people are talking about
+            div
+                i.fas.fa-comment
+                h3.left-content-heading Join the people
+    // end of left
+    // right
+    .right
+        form.right-content-form
+            input.user-info(type='text' placeholder='Phone, email or username')
+            div
+                input.password(type='password' placeholder='Password')
+                label Forgot password?
+            button.btn-top(type='button') Log in
+        .middle-content
+            i.fas.fa-dove
+            h1 Explore what&apos;s happening in the world
+            h4 Join Twertter today
+            button.sign-up(type='button') Sign up
+            button.log-in(type='button') Log In
+    // end of right
+    // footer
+    footer.main-page-footer
+        ul
+            li
+                a(href='#') About
+            li
+                a(href='#') Blog
+            li
+                a(href='#') Help
+            li
+                a(href='#') Terms
+            li
+                a(href='#') Apps
+            li
+                a(href='#') Settings
+            li
+                a(href='#') Contact
+            li
+                a(href='#') Status
+            li
+                a(href='#') Privacy Policy
+            li
+                a(href='#') Brand
+            li
+                a(href='#') Developers
+            li
+                a(href='#') &copy; 2021 Twertter
+    // end of footer
+// end of main page
