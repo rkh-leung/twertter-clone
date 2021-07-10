@@ -26,7 +26,7 @@ router.post('/', async (req, res, next) => {
 
       if (result === true) {
           req.session.user = user
-          return res.redirect('/')
+          return res.redirect('/home')
       }
     }
     payload.errorMessage = 'Login credentials incorrect'
