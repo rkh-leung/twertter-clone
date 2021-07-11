@@ -5,4 +5,4 @@ mixin createPostForm(userLoggedIn)
         .textareaContainer
             textarea#postTextarea(type="text", placeholder="What's happening?", onkeyup='enableButton()')
             .buttonContainer
-                button#submitPostButton(disabled="") Post
+                button#submitPostButton(disabled="", onclick="submitData()") Post

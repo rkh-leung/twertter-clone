@@ -17,7 +17,7 @@ server.use('/home', require('./routes/homeRoutes'))
 server.use('/login', require('./routes/loginRoutes'))
 server.use('/logout', require('./routes/logoutRoutes'))
 server.use('/register', require('./routes/registerRoutes'))
-
+server.use('/api/posts', require('./routes/api/posts'))
 
 module.exports = server
 
