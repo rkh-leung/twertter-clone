@@ -6,20 +6,23 @@ const enableButton = () => {
 
 const submitData = async () => {
     const textarea = document.querySelector('#postTextarea')
-    const submitButton = document.querySelector('#submitPostButton')
+    // const submitButton = document.querySelector('#submitPostButton')
 
     const data = {
         content: textarea.value
     }
 
     const url = '/api/posts'
-    const config = {
+    const fetchOptions = {
         method: 'POST',
         body: data
     }
-    let response = await fetch(url, config)
-    let result = await response.text()
-    alert(result)
+    let response = await fetch(url, fetchOptions)
+    if (response.ok) {
+        return await response.text()
+    } else {
+        alert("HTTP-Error: " + response.status)
+    }
 }
 
 // function createPostHtml(postData) {
