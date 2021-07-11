@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const User = require('../schemas/userSchemas')
+const User = require('../schemas/UserSchemas')
 const bcrypt = require('bcrypt')
 
 router.get('/', (req, res, next) => {

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt')
-const User = require('../schemas/userSchemas')
+const User = require('../schemas/UserSchemas')
 require('../mongoUtil')
 
 router.get("/", (req, res, next) => {
