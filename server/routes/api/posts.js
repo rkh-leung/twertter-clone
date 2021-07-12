@@ -2,7 +2,14 @@ const router = require('express').Router()
 const Post = require('../../schemas/PostSchemas')
 const User = require('../../schemas/UserSchemas')
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
+    Post.find()
+        .populate('postedBy')
+        .then(results => res.status(200).send(results))
+        .catch(error => {
+            console.log(`Error: ${error}`)
+            res.sendStatus(400)
+        })
 })
 
 router.post('/', (req, res) => {
