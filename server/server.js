@@ -1,7 +1,6 @@
 const express = require('express')
 const server = express()
 const path = require('path')
-const bodyParser = require('body-parser')
 const session = require('express-session')
 require('dotenv').config()
 
@@ -9,7 +8,9 @@ server.set('view engine', 'pug')
 server.set('views', path.join(__dirname, 'views'))
 
 server.use(session({ secret: 'neovim lover', resave: false, saveUninitialized: true, cookie: {} }))
-server.use(bodyParser.urlencoded({ extended: false }))
+server.use(express.json())
+server.use(express.text())
+server.use(express.urlencoded({ extended: true }))
 server.use(express.static(path.join(__dirname, 'public')))
 
 server.use('/', require('./routes/landingRoutes'))
@@ -20,14 +21,3 @@ server.use('/register', require('./routes/registerRoutes'))
 server.use('/api/posts', require('./routes/api/posts'))
 
 module.exports = server
-
-// var sess = {
-//     secret: 'keyboard cat',
-//     cookie: {}
-// }
-
-// if (app.get('env') === 'production') {
-//     app.set('trust proxy', 1) // trust first proxy
-//     sess.cookie.secure = true // serve secure cookies
-// }
-// console.log(result.parsed)

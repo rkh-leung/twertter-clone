@@ -5,18 +5,16 @@ const enableButton = () => {
 }
 
 const submitData = async () => {
-    const textarea = document.querySelector('#postTextarea')
-    // const submitButton = document.querySelector('#submitPostButton')
-
-    const data = {
-        content: textarea.value
-    }
-
+    const textInput = document.querySelector('#postTextarea')
     const url = '/api/posts'
+    const data = JSON.stringify({
+        content: textInput.value
+    })
     const fetchOptions = {
         method: 'POST',
         body: data
     }
+    console.log(textInput.value)
     let response = await fetch(url, fetchOptions)
     if (response.ok) {
         return await response.text()
@@ -27,9 +25,9 @@ const submitData = async () => {
 
 // function createPostHtml(postData) {
 //
-//     var postedBy = postData.postedBy;
-//     var displayName = postedBy.firstName + " " + postedBy.lastName;
-//     var timestamp = postData.createdAt;
+//     const postedBy = postData.postedBy;
+//     const displayName = postedBy.firstName + " " + postedBy.lastName;
+//     const timestamp = postData.createdAt;
 //
 //     return `<div class='post'>
 //
