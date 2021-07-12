@@ -5,6 +5,7 @@ const User = require('../../schemas/UserSchemas')
 router.get('/', async (req, res) => {
     Post.find()
         .populate('postedBy')
+        .sort({'createdAt': -1})
         .then(results => res.status(200).send(results))
         .catch(error => {
             console.log(`Error: ${error}`)
