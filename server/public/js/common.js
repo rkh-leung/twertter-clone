@@ -17,7 +17,8 @@ const submitData = async () => {
     console.log(textInput.value)
     let response = await fetch(url, fetchOptions)
     if (response.ok) {
-        return await response.text()
+        const result = await response.json()
+        console.log(result)
     } else {
         alert("HTTP-Error: " + response.status)
     }
