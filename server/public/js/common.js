@@ -6,6 +6,7 @@ const enableButton = () => {
 
 const submitData = async () => {
     const textInput = document.querySelector('#postTextarea')
+    const submitButton = document.querySelector('#submitPostButton')
     const url = '/api/posts'
     const data = JSON.stringify({
         content: textInput.value
@@ -18,51 +19,52 @@ const submitData = async () => {
     let response = await fetch(url, fetchOptions)
     if (response.ok) {
         const result = await response.json()
-        console.log(result)
+        const html = createPostHtml(result)
+        $(".postsContainer").prepend(html)
+        textInput.value = ""
+        submitButton.disabled = true
     } else {
         alert("HTTP-Error: " + response.status)
     }
 }
 
-// function createPostHtml(postData) {
-//
-//     const postedBy = postData.postedBy;
-//     const displayName = postedBy.firstName + " " + postedBy.lastName;
-//     const timestamp = postData.createdAt;
-//
-//     return `<div class='post'>
-//
-//                 <div class='mainContentContainer'>
-//                     <div class='userImageContainer'>
-//                         <img src='${postedBy.profilePic}'>
-//                     </div>
-//                     <div class='postContentContainer'>
-//                         <div class='header'>
-//                             <a href='/profile/${postedBy.username}' class='displayName'>${displayName}</a>
-//                             <span class='username'>@${postedBy.username}</span>
-//                             <span class='date'>${timestamp}</span>
-//                         </div>
-//                         <div class='postBody'>
-//                             <span>${postData.content}</span>
-//                         </div>
-//                         <div class='postFooter'>
-//                             <div class='postButtonContainer'>
-//                                 <button>
-//                                     <i class='far fa-comment'></i>
-//                                 </button>
-//                             </div>
-//                             <div class='postButtonContainer'>
-//                                 <button>
-//                                     <i class='fas fa-retweet'></i>
-//                                 </button>
-//                             </div>
-//                             <div class='postButtonContainer'>
-//                                 <button>
-//                                     <i class='far fa-heart'></i>
-//                                 </button>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>`
-// }
+function createPostHtml(postData) {
+    const postedBy = postData.postedBy;
+    const displayName = postedBy.firstName + " " + postedBy.lastName;
+    const timestamp = postData.createdAt;
+
+    return `<div class='post'>
+                <div class='mainContentContainer'>
+                    <div class='userImageContainer'>
+                        <img src='${postedBy.profilePic}' alt="User's profile picture">
+                    </div>
+                    <div class='postContentContainer'>
+                        <div class='header'>
+                            <a href='/profile/${postedBy.username}' class='displayName'>${displayName}</a>
+                            <span class='username'>@${postedBy.username}</span>
+                            <span class='date'>${timestamp}</span>
+                        </div>
+                        <div class='postBody'>
+                            <span>${postData.content}</span>
+                        </div>
+                        <div class='postFooter'>
+                            <div class='postButtonContainer'>
+                                <button>
+                                    <i class='far fa-comment'></i>
+                                </button>
+                            </div>
+                            <div class='postButtonContainer'>
+                                <button>
+                                    <i class='fas fa-retweet'></i>
+                                </button>
+                            </div>
+                            <div class='postButtonContainer'>
+                                <button>
+                                    <i class='far fa-heart'></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`
+}
