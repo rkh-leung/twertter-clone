@@ -28,6 +28,14 @@ const submitData = async () => {
     }
 }
 
+const likeButton= async () => {
+    const
+}
+
+function getPostIdFromElement(element) {
+    const rootElement
+}
+
 function createPostHtml(postData) {
     const postedBy = postData.postedBy;
     const displayName = postedBy.firstName + " " + postedBy.lastName;
@@ -59,7 +67,7 @@ function createPostHtml(postData) {
                                 </button>
                             </div>
                             <div class='postButtonContainer'>
-                                <button>
+                                <button class="likeButton">
                                     <i class='far fa-heart'></i>
                                 </button>
                             </div>
